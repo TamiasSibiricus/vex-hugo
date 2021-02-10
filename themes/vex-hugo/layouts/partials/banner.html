@@ -1,4 +1,4 @@
-{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ $data := index .Site.Data }}
 
 {{- if $data.homepage.banner.enable }}
 {{- with $data.homepage.banner }}

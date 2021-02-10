@@ -6,7 +6,8 @@
       <div class="col-12 text-center mb-5">
         <h1 class="font-weight-bold">{{.Title}}</h1>
       </div>
-      {{ range (where .Site.RegularPages "Section" "products") }}
+      {{ $paginator := .Paginate (where .Site.RegularPages "Section" "products") 24 }}
+      {{ range $paginator.Pages }}
       <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
         <div class="block">
           <div class="gallery-overlay">
@@ -14,16 +15,19 @@
               <i class="tf-ion-plus-round"></i>
             </a>
           </div>
-          <img class="img-fluid" src="{{range first 1 .Params.images}}{{.|absURL}}{{end}}" alt="{{.Title}}">
+          <img class="img-fluid" src="{{.Params.image}}" alt="{{.Title}}">
         </div>
         <div class="product-info">
-        <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
-        <p class="price">{{if .Params.discount_price}}{{site.Params.currency}}{{.Params.discount_price}}{{else}}{{site.Params.currency}}{{.Params.price}}{{end}}
-          {{if .Params.discount_price}}<s class="price">{{site.Params.currency}}{{ .Params.price }}</s>{{end}}
-          </p>
+          <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{ .Title }}</a></h4>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+          <a class="btn btn-main btn-sm mb-5" style="padding: 5px 20px;" href="{{ .Params.af_url }}" target="_blank">{{i18n "buy"}}</a>
         </div>
       </div>
       {{ end }}
+      <div class="col-12 d-flex flex-row justify-content-center">
+        {{ template "_internal/pagination.html" . }}
+      </div>
     </div>
   </div>
 </section>

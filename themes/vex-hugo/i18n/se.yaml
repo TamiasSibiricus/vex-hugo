@@ -1,0 +1,11 @@
+- id: "buy"
+  translation: "Köp"
+  
+- id: "send"
+  translation: "Skicka nu"
+  
+- id: "subscribe"
+  translation: "Prenumerera"
+  
+- id: "read_more"
+  translation: "Läs mer"

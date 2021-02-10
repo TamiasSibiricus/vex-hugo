@@ -1,4 +1,4 @@
-{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ $data := index .Site.Data }}
 
 {{ if $data.homepage.products.enable }}
 <section class="gallery" id="products">
@@ -10,14 +10,14 @@
         </div>
 
         <div class="product-slider">
-          {{ range (where .Site.RegularPages "Section" "products") }}
+          {{ range first 10 (where .Site.RegularPages "Section" "products") | shuffle }}
           <div class="block">
             <div class="gallery-overlay">
               <a href="{{ .Permalink }}" class="gallery-popup">
                 <i class="tf-ion-plus-round"></i>
               </a>
             </div>
-            <img class="img-fluid" src="{{range first 1 .Params.images}}{{.|absURL}}{{end}}" alt="{{.Title}}">
+            <img class="img-fluid" src="{{ .Params.image }}" alt="{{ .Title }}">
           </div>
           {{ end }}
         </div>
