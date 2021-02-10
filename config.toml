@@ -1,0 +1,117 @@
+relativeURLs = false
+metaDataFormat = "json"
+disableKinds = [ "RSS" ]
+baseurl = "https://vex-hugo-rvy6x.ondigitalocean.app/"
+homepage = "https://vex-hugo-rvy6x.ondigitalocean.app"
+title = "Products site"
+theme = "vex-hugo"
+defaultContentLanguage = "se"
+
+[taxonomies]
+category = "categories"
+
+[permalinks]
+products = "/p/:slug/"
+categories = "/pc/:slug/"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+logo = "images/logo.png"
+logo_width = "100px"
+description = "This is meta description"
+author = "Denys Kyselov"
+currency = "$"
+contact_form_action = "#"
+paginate = 24
+snipcart_api = "ZDgxY2ZiM2EtMWRmMi00M2ZkLWI1MDAtNzA2MDc0Y2Q1MzJlNjM3MTAzNDIwOTQ1NDA4NjM4"
+
+  [params.preloader]
+  enable = true
+  preloader = ""
+
+  [params.subscription]
+  mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074"
+  mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074"
+
+[[params.plugins.css]]
+link = "https://fonts.googleapis.com/css?family=Droid+Serif:400|Josefin+Sans:300,400,600,700"
+
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+
+[[params.plugins.css]]
+link = "plugins/themefisher-font/themefisher-font.min.css"
+
+[[params.plugins.css]]
+link = "plugins/slick/slick.min.css"
+
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.js"
+
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Products"
+url = "products"
+weight = 2
+
+[[menu.main]]
+name = "Blog"
+url = "blog"
+weight = 3
+
+[[menu.main]]
+name = "Review"
+pre = "#"
+url = "testimonial"
+weight = 4
+
+[[menu.main]]
+name = "Contact"
+url = "contact"
+weight = 5
+
+[[menu.footer]]
+name = "Blog"
+url = "blog"
+weight = 1
+
+[[menu.footer]]
+name = "Contact"
+url = "contact"
+weight = 2
+
+[[menu.footer]]
+name = "Terms & Conditions"
+url = "terms-conditions"
+weight = 3
+
+[[menu.footer]]
+name = "Privacy Policy"
+url = "privacy-policy"
+weight = 4
+
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content"
+weight = 1
+copyright = "Developed by /dev/hands"
+
+[Languages.se]
+languageName = "Se"
+languageCode = "sv-se"
+contentDir = "content"
+weight = 2
+copyright = "Utvecklad av /dev/hands"
