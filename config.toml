@@ -1,8 +1,8 @@
 relativeURLs = false
 metaDataFormat = "json"
 disableKinds = [ "RSS" ]
-baseurl = "https://vex-hugo-rvy6x.ondigitalocean.app/"
-homepage = "https://vex-hugo-rvy6x.ondigitalocean.app"
+baseurl = "https://vex-hugo-to7ju.ondigitalocean.app/"
+homepage = "https://vex-hugo-to7ju.ondigitalocean.app"
 title = "Products site"
 theme = "vex-hugo"
 defaultContentLanguage = "se"
